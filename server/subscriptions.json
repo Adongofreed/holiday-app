@@ -1,0 +1,26 @@
+[
+  {
+    "endpoint": "https://fcm.googleapis.com/wp/e-YhAzZZfes:APA91bH37Om-s_Fi_sol3AN0yOqcFLdeihwLQqmUMlPIJPUh78RypGoWTQ9BlZWhoeIYx5DWejuVmzxnJ71C-0ZNMC-ORlyr4uLr7YIUbM053YZ9EAD9pn8l63Dv59Y_AVWt_VLf-nmx",
+    "expirationTime": null,
+    "keys": {
+      "p256dh": "BHrt43tiWEb8uCb80OWLpxd3SC4fJWqdTG4U3l5wNM7FWTW5l4hEk2dxYBjjqNsI_G6IG1CVdIyvWuRNiZpOXbc",
+      "auth": "ZKQ2HlhPgyMxu1Qcn8I4NA"
+    },
+    "createdAt": "2025-12-23T00:29:57.555Z",
+    "updatedAt": "2025-12-23T00:29:57.555Z",
+    "notificationSent": true,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+    "notificationSentAt": "2025-12-23T07:46:52.716Z"
+  },
+  {
+    "endpoint": "https://fcm.googleapis.com/wp/cChcphOJMrY:APA91bGtHEiuYSWf3tXiHiypGY-ZwGsGOGaDqwMg9RV64qq9p-3zDaI8QZEBSnNYZ2R2G7-27cYHVNxobzlEcXDMF6JpUL7o_xPDbVHu1428G-R8RJaOhJtHVEptrjiax9PbaLbJmP4H",
+    "expirationTime": null,
+    "keys": {
+      "p256dh": "BO9hISTSG_ua2YvL5wqvOj8zHTnTMHCVcuYHHLKH8kgAZ8rlplvtqsEO-KRInpB778VR01WqWpgG__9p2kuxw-c",
+      "auth": "FJk2NJepXtfq75yWtVHzPQ"
+    },
+    "createdAt": "2025-12-23T07:45:58.536Z",
+    "notificationSent": true,
+    "notificationSentAt": "2025-12-23T07:46:52.716Z"
+  }
+]
