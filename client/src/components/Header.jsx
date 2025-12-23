@@ -1,37 +1,27 @@
-/* @refresh reset */
-import { motion } from 'framer-motion'
-import '../styles/components.css'
+import { motion } from 'framer-motion';
+import '../styles/sparkles-theme.css';
 
 const Header = () => {
-  console.log('Header mounted')
   return (
     <motion.header 
+      className="main-header"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      transition={{ type: 'spring', stiffness: 100 }}
-      className="header slide-down"
+      transition={{ type: 'spring', stiffness: 120 }}
     >
       <div className="header-content">
-        <div className="logo-container">
-          <div className="logo-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <circle cx="12" cy="12" r="10"/>
-              <path d="M12 6v6l4 2"/>
-            </svg>
+        <div className="brand-wrapper">
+          <div className="logo-container">
+            <span className="logo-icon">✨</span>
           </div>
-          <div className="logo-text">
-            <h1>Festive Moments</h1>
-            <p>Celebrate in Style</p>
+          <div className="brand-info">
+            <h1 className="brand-title">Sparkles I.T</h1>
+            <p className="brand-subtitle">Printing & Digital Solutions • Nalerigu</p>
           </div>
-        </div>
-        
-        <div className="status-indicator">
-          <div className="status-dot"></div>
-          <span className="status-text">Online</span>
         </div>
       </div>
     </motion.header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

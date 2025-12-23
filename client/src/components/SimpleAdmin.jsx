@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const AdminPanel = () => {
+const SimpleAdmin = () => {
   const [token, setToken] = useState('');
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [stats, setStats] = useState(null);
@@ -166,7 +166,7 @@ const AdminPanel = () => {
     input: {
       width: '100%',
       padding: '12px 16px',
-      border: '1px solid #d2d2d7',
+      border: '1px solid #1111aaff',
       borderRadius: '8px',
       fontSize: '16px',
       marginBottom: '16px',
@@ -346,7 +346,7 @@ const AdminPanel = () => {
     <div style={styles.adminPage}>
       <style>{`
         button:hover { opacity: 0.9; }
-        tr:hover { background-color: #f9f9f9; }
+        tr:hover { background-color: #F5F5F7; }
         .loading { animation: spin 1s linear infinite; }
         @keyframes spin { to { transform: rotate(360deg); } }
         @media (max-width: 768px) {
@@ -454,6 +454,7 @@ const AdminPanel = () => {
                         <code style={{ 
                           fontFamily: 'monospace', 
                           fontSize: '12px',
+                          color: '#333',
                           backgroundColor: '#f5f5f7',
                           padding: '4px 8px',
                           borderRadius: '4px'
@@ -512,4 +513,4 @@ const AdminPanel = () => {
   );
 };
 
-export default AdminPanel;
+export default SimpleAdmin;

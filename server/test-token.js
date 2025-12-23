@@ -50,8 +50,9 @@ async function testToken() {
     if (adminTokenLine) {
       const envToken = adminTokenLine.split('=')[1];
       console.log(`   Found ADMIN_TOKEN in .env`);
-      console.log(`   Env token length: ${envToken.length}`);
-      console.log(`   Env token starts with: ${envToken.substring(0, 10)}...`);
+      const safeEnv = (envToken || '').toString();
+      console.log(`   Env token length: ${safeEnv.length}`);
+      console.log(`   Env token starts with: ${safeEnv.substring(0, 10)}...`);
       
       if (envToken === token) {
         console.log('   ✅ Tokens match!');

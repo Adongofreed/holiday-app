@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNotification } from '../hooks/useNotification';
+import '../styles/sparkles-theme.css';
 
 const NotificationSection = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -16,52 +17,43 @@ const NotificationSection = () => {
 
   if (!isSupported) {
     return (
-      <motion.section 
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.8 }}
-        className="notification-section fade-in"
-      >
-        <div className="notification-card">
-          <div className="flex items-start">
-            <div className="notification-icon-container">
-              <span className="notification-icon">📱</span>
-            </div>
+      <div className="notification-container">
+        <div className="notification-card notification-error">
+          <div className="notification-header">
+            <div className="notification-icon">📱</div>
             <div className="notification-text">
               <h3>Browser Not Supported</h3>
-              <p className="text-gray-600">
-                Push notifications are not supported in your browser. Please try using Chrome, Firefox, or Safari.
+              <p className="notification-subtext">
+                Push notifications are not supported in your browser. 
+                Please try using Chrome, Firefox, or Safari.
               </p>
             </div>
           </div>
         </div>
-      </motion.section>
+      </div>
     );
   }
 
   return (
-    <motion.section 
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.8 }}
-      className="notification-section fade-in"
-    >
-      <div className="notification-card">
+    <div className="notification-container">
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.8 }}
+        className="notification-card"
+      >
         <div className="notification-header">
-          <div className="flex items-start">
-            <div className="notification-icon-container">
-              <span className="notification-icon">🔔</span>
-            </div>
-            <div className="notification-text">
-              <h3>New Year Notification</h3>
-              <p>Get a special greeting when the new year begins</p>
-            </div>
+          <div className="notification-icon">🔔</div>
+          <div className="notification-text">
+            <h3>New Year 2026 Notification</h3>
+            <p className="notification-subtext">
+              Get a special greeting when the new year begins
+            </p>
           </div>
           
           <button
             className="notification-toggle"
             onClick={() => setIsExpanded(!isExpanded)}
-            aria-label={isExpanded ? 'Collapse details' : 'Expand details'}
           >
             {isExpanded ? '▲' : '▼'}
           </button>
@@ -73,17 +65,14 @@ const NotificationSection = () => {
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: 'auto', opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              className="overflow-hidden"
+              className="notification-details"
             >
               <div className="info-box">
-                <h4>
-                  <span>ℹ️</span> How it works
-                </h4>
+                <h4>How it works</h4>
                 <ul className="info-list">
                   <li>Click "Enable Notifications" to opt-in</li>
-                  <li>Receive exactly one notification on January 1st</li>
-                  <li>We don't store personal data - only anonymous subscription info</li>
+                  <li>Receive exactly one notification on January 1st, 2026</li>
+                  <li>We don't store personal data</li>
                   <li>You can unsubscribe anytime</li>
                 </ul>
               </div>
@@ -91,7 +80,7 @@ const NotificationSection = () => {
           )}
         </AnimatePresence>
 
-        <div className="mt-6">
+        <div className="notification-actions">
           {error && (
             <div className="error-message">
               {error}
@@ -99,61 +88,43 @@ const NotificationSection = () => {
           )}
 
           {permission === 'denied' ? (
-            <div className="text-center py-4">
-              <p className="text-gray-600 mb-4">
-                You've blocked notifications. Please enable them in your browser settings.
-              </p>
-              <button
-                onClick={() => window.open('https://support.google.com/chrome/answer/3220216', '_blank')}
-                className="text-blue-600 hover:text-blue-800 text-sm font-semibold"
-              >
-                How to enable notifications →
-              </button>
+            <div className="permission-denied">
+              <p>You've blocked notifications. Please enable them in your browser settings.</p>
             </div>
           ) : isSubscribed ? (
-            <div className="text-center">
+            <div className="subscribed-state">
               <div className="success-badge">
                 <div className="success-dot"></div>
-                Notifications Enabled ✓
+                Notifications Enabled
               </div>
-              <p className="text-gray-600 mb-4 text-sm">
-                You'll receive a special New Year greeting on January 1st
+              <p className="success-message">
+                You'll receive a New Year greeting on January 1st, 2026
               </p>
               <button
                 onClick={unsubscribe}
                 disabled={isLoading}
                 className="btn btn-secondary"
               >
-                {isLoading ? (
-                  <div className="flex items-center justify-center">
-                    <div className="spinner spinner-dark"></div>
-                    Processing...
-                  </div>
-                ) : 'Unsubscribe'}
+                {isLoading ? 'Processing...' : 'Unsubscribe'}
               </button>
             </div>
           ) : (
-            <div className="text-center">
+            <div className="subscribe-state">
               <button
                 onClick={subscribe}
                 disabled={isLoading || permission === 'denied'}
                 className="btn btn-primary"
               >
-                {isLoading ? (
-                  <div className="flex items-center justify-center">
-                    <div className="spinner"></div>
-                    Setting up...
-                  </div>
-                ) : 'Enable Notifications'}
+                {isLoading ? 'Setting up...' : 'Enable Notifications'}
               </button>
-              <p className="text-gray-600 text-sm mt-4">
+              <p className="privacy-note">
                 One notification only · No spam · Privacy respected
               </p>
             </div>
           )}
         </div>
-      </div>
-    </motion.section>
+      </motion.div>
+    </div>
   );
 };
 

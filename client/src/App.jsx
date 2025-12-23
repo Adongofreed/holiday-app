@@ -2,32 +2,31 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/Layout';
 import HeroSection from './components/HeroSection';
-import GallerySection from './components/GallerySection';
-import NotificationSection from './components/NotificationSection';
+import ServicesSection from './components/ServicesSection';
+import PortfolioSection from './components/PortfolioSection';
 import SimpleAdmin from './components/SimpleAdmin';
-import './styles/global.css';
-import './styles/animations.css';
-import './styles/components.css';
+import NotificationSection from './components/NotificationSection';
+import Footer from './components/Footer';
+import './styles/sparkles-theme.css';
 
 function App() {
   return (
     <Router>
       <Routes>
-        {/* Main App Route */}
         <Route path="/" element={
           <Layout>
             <HeroSection />
-            <GallerySection />
+            <ServicesSection />
+            <PortfolioSection />
             <NotificationSection />
           </Layout>
         } />
-        
-        {/* Admin Route - Using SimpleAdmin */}
+
+        {/* Dedicated admin portal */}
         <Route path="/admin" element={<SimpleAdmin />} />
-        
-        {/* Redirect all other routes to home */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }

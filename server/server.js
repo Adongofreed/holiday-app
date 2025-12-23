@@ -68,9 +68,11 @@ const authenticateAdmin = (req, res, next) => {
   const validToken = process.env.ADMIN_TOKEN || 'test_admin_token_123';
 
   console.log('🔐 Auth check:');
-  console.log('   Expected:', validToken.substring(0, 10) + '...');
-  console.log('   Received:', token.substring(0, 10) + '...');
-  console.log('   Match:', token === validToken);
+  const safeValid = (validToken || '').toString();
+  const safeToken = (token || '').toString();
+  console.log('   Expected:', safeValid.substring(0, 10) + '...');
+  console.log('   Received:', safeToken.substring(0, 10) + '...');
+  console.log('   Match:', safeToken === safeValid);
 
   if (token !== validToken) {
     return res.status(401).json({ 

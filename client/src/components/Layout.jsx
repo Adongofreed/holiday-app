@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Header from './Header';
+import '../styles/sparkles-theme.css';
 
 const Layout = ({ children }) => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -10,16 +11,11 @@ const Layout = ({ children }) => {
   }, []);
 
   return (
-    <div className={`min-h-screen fade-in ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
+    <div className={`app-container ${isLoaded ? 'loaded' : ''}`}>
       <Header />
-      <main className="container mx-auto px-4 pb-20">
+      <main className="main-content">
         {children}
       </main>
-      <footer className="footer">
-        <div className="footer-content">
-          <p>Wishing you joy and happiness this holiday season</p>
-        </div>
-      </footer>
     </div>
   );
 };
