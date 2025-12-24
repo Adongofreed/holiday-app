@@ -1,0 +1,9 @@
+[build]
+  # Build the client folder and publish its output
+  command = "npm --prefix client run build"
+  publish = "client/dist"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
