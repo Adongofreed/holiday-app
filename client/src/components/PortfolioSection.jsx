@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import '../styles/sparkles-theme.css';
+import '../styles/portfolio-images.css';
 
 const PortfolioSection = () => {
   const projects = [
@@ -14,7 +15,7 @@ const PortfolioSection = () => {
       description: 'High-quality t-shirt printing for events, teams, and promotional activities.'
     },
     {
-      image: "portfolio/banner-design.jpg",
+      image: '/portfolio/banner-design1.jpg',
       title: 'Banner & Signage',
       description: 'Large format printing for banners, signs, and outdoor advertising.'
     },
@@ -61,11 +62,7 @@ const PortfolioSection = () => {
               transition={{ delay: index * 0.1 }}
             >
               <div className="project-image">
-                <div className="image-placeholder">
-                  <span className="placeholder-icon">🖼️</span>
-                  <p className="image-text">Project Image</p>
-                  <p className="image-description">{project.image}</p>
-                </div>
+                <img src={project.image} alt={project.title} className="project-img" loading="lazy" />
               </div>
               <div className="project-content">
                 <h3 className="project-title">{project.title}</h3>

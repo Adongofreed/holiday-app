@@ -1,0 +1,28 @@
+/* Scoped styles for project images in PortfolioSection */
+.portfolio-section .project-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-section .project-content {
+  padding: 1rem;
+}
+
+.portfolio-section .project-image {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.portfolio-section .project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (min-width: 1024px) {
+  .portfolio-section .project-image {
+    height: 220px;
+  }
+}
