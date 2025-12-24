@@ -14,7 +14,7 @@ const PortfolioSection = () => {
       description: 'High-quality t-shirt printing for events, teams, and promotional activities.'
     },
     {
-      image: '/portfolio/banner-design.jpg',
+      image: "portfolio/banner-design.jpg",
       title: 'Banner & Signage',
       description: 'Large format printing for banners, signs, and outdoor advertising.'
     },

@@ -165,9 +165,9 @@ body {
 
 .brand-wrapper {
   display: flex;
-  align-items: center;
+  align-items: left;
   gap: var(--space-md);
-  justify-content: center;
+  justify-content: left;
 }
 
 .logo-container {
@@ -719,7 +719,9 @@ body {
 }
 
 .project-image {
+
   height: 200px;
+  
   background: linear-gradient(135deg, 
     rgba(139, 92, 246, 0.2),
     rgba(6, 182, 212, 0.2));
@@ -1212,8 +1214,8 @@ body {
 }
 
 .contact-card .contact-icon {
-  width: 48px;
-  height: 48px;
+  width: 45px;
+  height: 45px;
   background: linear-gradient(135deg, 
     var(--gradient-start),
     var(--gradient-mid));
@@ -1221,28 +1223,36 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: white;
   flex-shrink: 0;
+  position: obsolute;
+  top: 0;
+  left: 0;
+  
 }
 
 .contact-details {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .contact-details h4 {
   font-size: 1.1rem;
   font-weight: 600;
   color: white;
-  margin-bottom: var(--space-xs);
+  /*margin-bottom: var(--space-xs);*/
 }
 
 .contact-details p,
 .contact-details a {
   color: rgba(255, 255, 255, 0.9);
   font-size: 1rem;
-  margin-bottom: var(--space-xs);
+  text-spacing-trim: both;
   text-decoration: none;
+  
 }
 
 .contact-details a:hover {
@@ -1254,6 +1264,185 @@ body {
   font-size: 0.85rem;
   color: rgba(255, 255, 255, 0.6);
   margin-top: var(--space-xs);
+}
+
+/* ========== CONTACT INFO LAYOUT ========== */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.contact-item {
+  display: flex;
+  gap: var(--space-md);
+  align-items: center;
+}
+
+.contact-item .contact-icon {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-mid));
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: white;
+  flex-shrink: 0;
+}
+
+.contact-label {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+}
+
+.contact-value {
+  margin: 0;
+  font-size: 1rem;
+  color: rgba(255,255,255,0.95);
+}
+
+.contact-value a {
+  color: rgba(255,255,255,0.95);
+  text-decoration: none;
+}
+.contact-value a:hover {
+  color: var(--accent-light);
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .contact-info {
+    gap: var(--space-sm);
+  }
+  .contact-item {
+    align-items: flex-start;
+    gap: var(--space-sm);
+  }
+  .contact-item .contact-icon {
+    width: 54px;
+    height: 54px;
+    font-size: 1.6rem;
+  }
+}
+
+/* ========== LOCATION CARD STYLES ========== */
+.location-card {
+  padding: var(--space-lg);
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0.03));
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--radius-lg);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.location-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gradient-start), var(--gradient-mid));
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.25s ease;
+}
+
+.location-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(139, 92, 246, 0.28);
+  box-shadow: 0 12px 32px rgba(139, 92, 246, 0.12);
+}
+
+.location-card:hover::before {
+  transform: scaleX(1);
+}
+
+.location-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+  align-items: start;
+}
+
+.location-item {
+  display: flex;
+  gap: var(--space-md);
+  align-items: center;
+}
+
+.location-icon {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-mid));
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: white;
+  flex-shrink: 0;
+}
+
+.location-label {
+  margin: 0;
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.8);
+  font-weight: 600;
+}
+.location-value {
+  margin: 0;
+  color: rgba(255,255,255,0.95);
+  font-size: 1rem;
+}
+
+.location-map {
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.04);
+  min-height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md);
+}
+
+.map-placeholder {
+  text-align: center;
+  color: rgba(255,255,255,0.9);
+}
+.map-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: var(--space-sm);
+}
+
+.location-note {
+  grid-column: 1 / -1;
+  color: rgba(255,255,255,0.75);
+  font-size: 0.95rem;
+  margin: 0;
+  padding-top: var(--space-sm);
+}
+
+@media (max-width: 768px) {
+  .location-info {
+    grid-template-columns: 1fr;
+  }
+  .location-map {
+    min-height: 120px;
+  }
+  .location-item {
+    justify-content: flex-start;
+  }
 }
 
 /* ========== NOTIFICATION SYSTEM - FIXED ========== */

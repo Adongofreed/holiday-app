@@ -12,7 +12,13 @@ const Header = () => {
       <div className="header-content">
         <div className="brand-wrapper">
           <div className="logo-container">
-            <span className="logo-icon">✨</span>
+            <span className="logo-icon">
+              <img 
+                src="/images/SPARKLES I.T LOGO.png" 
+                alt="Sparkles I.T Logo" 
+                style={{ width: '40px', height: 'auto' }} 
+              />
+            </span>
           </div>
           <div className="brand-info">
             <h1 className="brand-title">Sparkles I.T</h1>

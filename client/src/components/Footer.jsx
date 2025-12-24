@@ -9,14 +9,20 @@ const Footer = () => {
         {/* Brand Section */}
         <div className="footer-brand">
           <div className="footer-logo">
-            <span className="logo-icon">✨</span>
+            <span className="logo-icon">
+              <img 
+                src="/images/SPARKLES I.T LOGO.png" 
+                alt="Sparkles I.T Logo" 
+                style={{ width: '50px', height: 'auto' }} 
+              />
+            </span>
             <div className="footer-brand-text">
               <h3 className="footer-brand-name">Sparkles I.T</h3>
               <p className="footer-tagline">Printing & Digital Excellence</p>
             </div>
           </div>
           <p className="footer-mission">
-            Providing professional printing and digital solutions in Nalerigu since 2024.
+            Providing professional printing and digital solutions in Nalerigu and beyond.
           </p>
         </div>
 
@@ -34,7 +40,7 @@ const Footer = () => {
             </div>
             <div className="contact-item">
               <span className="contact-icon">📧</span>
-              <p>contact@sparklesit.com</p>
+              <p>adongojamaal19@gmail.com</p>
             </div>
           </div>
         </div>
@@ -58,11 +64,11 @@ const Footer = () => {
           <div className="hours-list">
             <div className="hours-item">
               <span className="day">Monday - Friday:</span>
-              <span className="time">8:00 AM - 8:00 PM</span>
+              <span className="time">6:00 AM - 10:00 PM</span>
             </div>
             <div className="hours-item">
               <span className="day">Saturday:</span>
-              <span className="time">8:00 AM - 6:00 PM</span>
+              <span className="time">7:00 AM - 10:00 PM</span>
             </div>
             <div className="hours-item">
               <span className="day">Sunday:</span>

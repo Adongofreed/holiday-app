@@ -41,11 +41,17 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <div className="greeting-icon">✨</div>
+          <div className="greeting-icon">
+            <img 
+                src="/images/SPARKLES I.T LOGO.png" 
+                alt="Sparkles I.T Logo" 
+                style={{ width: '120px', height: 'auto' }} 
+              />
+          </div>
           
           <div className="brand-highlight">
             <h1>Sparkles I.T</h1>
-            <span className="year">Nalerigu • Since 2024</span>
+            <span className="year">Nalerigu • Top of the tech game</span>
           </div>
           
           <div className="greeting-text">
@@ -150,16 +156,21 @@ const HeroSection = () => {
     <div className="contact-details">
       <h4>Visit Us</h4>
       <p>Sparkles I.T, Nalerigu</p>
-      <p className="contact-note">Easy to find location</p>
+      <p className="contact-note">Easy to find location.</p>
+      <p>Behind the GCB Bank, Nalerigu.</p>
+      <p>Annex: NMTC campus, opposite Emergency Hostel</p>
     </div>
   </div>
   
   <div className="contact-card">
     <div className="contact-icon">📞</div>
     <div className="contact-details">
-      <h4>Call Now</h4>
+      <h4>Call Now/ WhatsApp Us On</h4>
       <a href="tel:0547706698">054 770 6698</a>
-      <p className="contact-note">Available 8AM-8PM</p>
+      <p>025 7301 424</p>
+      <p>059 361 5590</p>
+      <p>059 619 8964</p>
+      <p className="contact-note">Always Available</p>
     </div>
   </div>
   
@@ -167,7 +178,7 @@ const HeroSection = () => {
       <div className="contact-icon">⏰</div>
         <div className="contact-details">
           <h4>Business Hours</h4>
-          <p>Mon-Sat: 8AM - 8PM</p>
+          <p>Mon-Sat: 6AM - 10PM</p>
           <p className="contact-note">Sunday: Closed</p>
         </div>
       </div>

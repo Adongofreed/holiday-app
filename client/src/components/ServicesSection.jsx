@@ -80,7 +80,7 @@ const ServicesSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h3 className="contact-title">Contact Us</h3>
+            <h3 className="contact-title"><p>Contact Us</p></h3>
             <div className="contact-info">
               <div className="contact-item">
                 <span className="contact-icon">📞</span>
@@ -93,14 +93,14 @@ const ServicesSection = () => {
                 <span className="contact-icon">📧</span>
                 <div>
                   <p className="contact-label">Email</p>
-                  <p className="contact-value">contact@sparklesit.com</p>
+                  <p className="contact-value">adongojamaal19@gmail.com</p>
                 </div>
               </div>
               <div className="contact-item">
                 <span className="contact-icon">⏰</span>
                 <div>
                   <p className="contact-label">Business Hours</p>
-                  <p className="contact-value">Monday - Saturday: 8:00 AM - 8:00 PM</p>
+                  <p className="contact-value">Monday - Saturday: 6:00 AM - 10:00 PM</p>
                 </div>
               </div>
             </div>
@@ -124,8 +124,8 @@ const ServicesSection = () => {
               <div className="location-map">
                 <div className="map-placeholder">
                   <span className="map-icon">🗺️</span>
-                  <p>Located in the heart of Nalerigu</p>
-                  <p className="map-note">Easy to find and access</p>
+                  <p>Located behind the GCB bank, Nalerigu</p>
+                  <p className="map-note">Annex: Opposite Emergency Hostel, NMTC</p>
                 </div>
               </div>
               <div className="location-note">
