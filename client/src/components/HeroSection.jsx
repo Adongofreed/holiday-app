@@ -41,12 +41,62 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
+          {/* Christmas Decoration Container - Inside greeting-message */}
+          <div className="christmas-decorations-container">
+            {/* Top Left Corner Decorations */}
+            <div className="corner-decoration top-left">
+              <img 
+                src="/images/christmas/christmas-ornament.gif" 
+                alt="Hanging Christmas Ornament" 
+                className="ornament-img"
+              />
+              
+            </div>
+
+            {/* Top Right Corner Decorations */}
+            <div className="corner-decoration top-right">
+              <img 
+                src="/images/christmas/christmas-star.png" 
+                alt="Christmas Star" 
+                className="star-img"
+              />
+             
+            </div>
+
+            {/* Christmas Tree - Large on Right Side */}
+            <div className="christmas-tree-large">
+              <img 
+                src="/images/christmas/christmas-tree.gif" 
+                alt="Christmas Tree" 
+                className="tree-large-img"
+              />
+            </div>
+
+            {/* Animated Snowflakes */}
+            <div className="snowflakes-container">
+              {Array.from({ length: 12 }).map((_, i) => (
+                <div 
+                  key={i}
+                  className="snowflake-item"
+                  style={{
+                    left: `${Math.random() * 100}%`,
+                    animationDelay: `${Math.random() * 5}s`,
+                    fontSize: `${Math.random() * 12 + 8}px`,
+                    opacity: Math.random() * 0.6 + 0.2
+                  }}
+                >
+                  ❄️
+                </div>
+              ))}
+            </div>
+          </div>
+
           <div className="greeting-icon">
             <img 
-                src="/images/SPARKLES I.T LOGO.png" 
-                alt="Sparkles I.T Logo" 
-                style={{ width: '120px', height: 'auto' }} 
-              />
+              src="/images/SPARKLES I.T LOGO.png" 
+              alt="Sparkles I.T Logo" 
+              style={{ width: '120px', height: 'auto' }} 
+            />
           </div>
           
           <div className="brand-highlight">
@@ -149,41 +199,40 @@ const HeroSection = () => {
         </div>
 
         {/* Quick Contact Info */}
-        {/* Add this after the countdown section in HeroSection.jsx */}
-<div className="quick-contact">
-  <div className="contact-card">
-    <div className="contact-icon">📍</div>
-    <div className="contact-details">
-      <h4>Visit Us</h4>
-      <p>Sparkles I.T, Nalerigu</p>
-      <p className="contact-note">Easy to find location.</p>
-      <p>Behind the GCB Bank, Nalerigu.</p>
-      <p>Annex: NMTC campus, opposite Emergency Hostel</p>
-    </div>
-  </div>
-  
-  <div className="contact-card">
-    <div className="contact-icon">📞</div>
-    <div className="contact-details">
-      <h4>Call Now/ WhatsApp Us On</h4>
-      <a href="tel:0547706698">054 770 6698</a>
-      <p>025 7301 424</p>
-      <p>059 361 5590</p>
-      <p>059 619 8964</p>
-      <p className="contact-note">Always Available</p>
-    </div>
-  </div>
-  
-    <div className="contact-card">
-      <div className="contact-icon">⏰</div>
-        <div className="contact-details">
-          <h4>Business Hours</h4>
-          <p>Mon-Sat: 6AM - 10PM</p>
-          <p className="contact-note">Sunday: Closed</p>
-        </div>
+        <div className="quick-contact">
+          <div className="contact-card">
+            <div className="contact-icon">📍</div>
+            <div className="contact-details">
+              <h4>Visit Us</h4>
+              <p>Sparkles I.T, Nalerigu</p>
+              <p className="contact-note">Easy to find location.</p>
+              <p>Behind the GCB Bank, Nalerigu.</p>
+              <p>Annex: NMTC campus, opposite Emergency Hostel</p>
+            </div>
+          </div>
+          
+          <div className="contact-card">
+            <div className="contact-icon">📞</div>
+            <div className="contact-details">
+              <h4>Call Now/ WhatsApp Us On</h4>
+              <a href="tel:0547706698">054 770 6698</a>
+              <p>025 7301 424</p>
+              <p>059 361 5590</p>
+              <p>059 619 8964</p>
+              <p className="contact-note">Always Available</p>
+            </div>
+          </div>
+          
+          <div className="contact-card">
+            <div className="contact-icon">⏰</div>
+              <div className="contact-details">
+                <h4>Business Hours</h4>
+                <p>Mon-Sat: 6AM - 10PM</p>
+                <p className="contact-note">Sunday: Closed</p>
+              </div>
+            </div>
+          </div>
       </div>
-    </div>
-  </div>
     </section>
   );
 };
