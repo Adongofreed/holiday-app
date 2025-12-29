@@ -24,7 +24,7 @@ if (!fs.existsSync(SUBSCRIPTIONS_FILE)) {
 
 // Middleware
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: 'https://holiday-app-xrjd.onrender.com',
   credentials: true
 }));
 
@@ -374,7 +374,7 @@ app.listen(PORT, () => {
 🔑 Default admin token: test_admin_token_123
    (Set ADMIN_TOKEN in .env to change)
 
-👉 Test: http://localhost:${PORT}/api/health
+👉 Test: https://holiday-app-xrjd.onrender.com:${PORT}/api/health
 ==========================
   `);
 });
