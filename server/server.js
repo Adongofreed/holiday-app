@@ -65,7 +65,7 @@ const authenticateAdmin = (req, res, next) => {
   }
 
   const token = authHeader.replace('Bearer ', '');
-  const validToken = process.env.ADMIN_TOKEN || 'test_admin_token_123';
+  const validToken = process.env.ADMIN_TOKEN || '1122';
 
   console.log('🔐 Auth check:');
   const safeValid = (validToken || '').toString();

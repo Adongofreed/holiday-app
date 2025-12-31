@@ -505,7 +505,7 @@ const SimpleAdmin = () => {
 
         {/* Footer */}
         <div style={{ textAlign: 'center', color: '#8e8e93', fontSize: '14px', padding: '20px' }}>
-          <p>Backend: http://localhost:5000 • Admin Panel v1.0</p>
+          <p>Backend: https://holiday-app-xrjd.onrender.com • Admin Panel v1.0</p>
           <p>Token: {token.substring(0, 20)}...</p>
         </div>
       </div>
