@@ -13,7 +13,7 @@ async function testToken() {
   // Test 2: Try to access admin endpoint
   console.log('\n2. Testing API endpoint:');
   try {
-    const response = await fetch('http://localhost:5000/api/admin/subscriptions', {
+    const response = await fetch('https://holiday-backend.onrender.com/api/admin/subscriptions', {
       headers: {
         'Authorization': `Bearer ${token}`
       }

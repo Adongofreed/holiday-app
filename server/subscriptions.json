@@ -31,7 +31,8 @@
       "auth": "HXxceEhxvJz3gKwVMUwY0w"
     },
     "createdAt": "2025-12-23T21:58:44.172Z",
-    "notificationSent": false
+    "notificationSent": true,
+    "notificationSentAt": "2025-12-31T13:29:39.159Z"
   },
   {
     "endpoint": "https://fcm.googleapis.com/wp/cHvWeoOKxjQ:APA91bGXAXWPlp6xUtc1n7fE4fNe7kN_ibQwOIBZ3JzXIe3EE6nYomiK8SYrFzY_EI7I5vGHsInkwlK7Fn5Sxj5BYPHP7IOGB6VfDwXTevrpZfvdMi0YoUxF-mKCMK3TGF2BplG1W4Dd",
@@ -41,6 +42,7 @@
       "auth": "XRaYIGBHd_nk6R_dkPwe7A"
     },
     "createdAt": "2025-12-24T16:42:21.190Z",
-    "notificationSent": false
+    "notificationSent": true,
+    "notificationSentAt": "2025-12-31T13:29:39.159Z"
   }
 ]
